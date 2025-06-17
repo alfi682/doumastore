@@ -1,2 +1,315 @@
 # doumastore
-toup disini di jamin amanah ragu = rugi
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>DoumaStore | Top Up Game Murah</title>
+  <meta name="description" content="Top Up Game Murah dan Aman di DoumaStore. Tersedia Free Fire, Mobile Legends, CODM, Hago, dan lainnya.">
+  <link rel="icon" href="https://assets.onecompiler.app/43mrdkttw/43mrdmchb/1000004792.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    .navbar {
+      background-color: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .logo .logo-img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      background: url('https://assets.onecompiler.app/43mrdkttw/43mrdmchb/1000004792.png') no-repeat center center / cover;
+    }
+    .navbar .logo span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .hero {
+      background: url('https://assets.onecompiler.app/43mrdkttw/43mre85df/1000005085.jpg') no-repeat center center / cover;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+    }
+    .game-list {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .game-card {
+      background: #222;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .game-card:hover {
+      background: #333;
+    }
+    .game-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    .form-section {
+      max-width: 700px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .form-section.hidden {
+      display: none;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    form button {
+      width: 100%;
+      padding: 12px;
+      background: #0f0;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    .diamond-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .diamond-item {
+      background: white;
+      color: black;
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .diamond-item:hover {
+      background-color: #e8ffe8;
+      border-color: #0f0;
+    }
+    .diamond-item img {
+      width: 24px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    .diamond-item .harga {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">
+      <div class="logo-img"></div>
+      <span>DoumaStore</span>
+    </div>
+    <div class="menu">
+      <a href="#games">Game</a>
+      <a href="#form">Top Up</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Top Up Game Terpercaya</h1>
+    <p>Free Fire • Mobile Legends • PUBG • CODM • Valorant • Genshin • Hago</p>
+  </div>
+
+  <div id="games" class="game-list">
+    <h2>Pilih Game</h2>
+    <div class="game-grid">
+      <div class="game-card" onclick="showForm('Free Fire')">
+        <div class="game-icon" style="background-image: url('https://assets.onecompiler.app/43mrdkttw/43mrdmchb/1000004792.png');"></div>
+        <p>Free Fire</p>
+      </div>
+      <div class="game-card" onclick="showForm('Mobile Legends')">
+        <div class="game-icon" style="background-image: url('https://assets.onecompiler.app/43mrdkttw/3zhquv7qh/1000005678.png');"></div>
+        <p>Mobile Legends</p>
+      </div>
+      <div class="game-card" onclick="showForm('Call of Duty Mobile')">
+        <div class="game-icon" style="background-image: url('https://assets.onecompiler.app/43mrdkttw/3zhquv7qh/1000005680.png');"></div>
+        <p>COD Mobile</p>
+      </div>
+      <div class="game-card" onclick="showForm('Hago')">
+        <div class="game-icon" style="background-image: url('https://assets.onecompiler.app/43mrdkttw/3zhquv7qh/1000005676.png');"></div>
+        <p>Hago</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="form" class="form-section hidden">
+    <h2 id="game-title">Top Up</h2>
+    <form onsubmit="submitForm(event)">
+      <label for="game-id">ID Game:</label>
+      <input type="text" id="game-id" required>
+      <label for="whatsapp">No WhatsApp:</label>
+      <input type="text" id="whatsapp" required>
+      <div id="diamond-list" class="diamond-container"></div>
+      <label for="nominal" id="nominal-label">Nominal:</label>
+      <select id="nominal"></select>
+      <button type="submit">Kirim</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <footer>
+    &copy; 2025 DoumaStore. Pembayaran via DANA: 082211040870<br>
+    Jika ada kesalahan, mohon hubungi admin.<br><br>
+    <a href="https://wa.me/6282211040870" target="_blank" style="color: #0f0; text-decoration: none; font-weight: bold;">
+      Hubungi Admin via WhatsApp
+    </a>
+  </footer>
+
+  <script>
+    const diamondData = [
+      { diamond: 5, price: 1000 }, { diamond: 12, price: 3000 },
+      { diamond: 50, price: 6000 }, { diamond: 70, price: 9000 },
+      { diamond: 140, price: 18000 }, { diamond: 355, price: 45000 },
+      { diamond: 720, price: 90000 }, { diamond: 1450, price: 180000 },
+      { diamond: 2180, price: 250000 }, { diamond: 3640, price: 400000 },
+      { diamond: 7290, price: 750000 }, { diamond: 36500, price: 1800000 },
+      { diamond: 73100, price: 3500000 }
+    ];
+
+    const codmTopUpOptions = [
+      { cp: 31, price: 5000 }, { cp: 63, price: 10000 },
+      { cp: 128, price: 15000 }, { cp: 321, price: 20000 },
+      { cp: 645, price: 30000 }, { cp: 800, price: 35000 },
+      { cp: 1373, price: 45000 }, { cp: 2060, price: 55000 },
+      { cp: 2750, price: 65000 }, { cp: 3564, price: 75000 },
+      { cp: 5619, price: 100000 }, { cp: 7656, price: 125000 },
+      { cp: 15312, price: 250000 }, { cp: 38280, price: 500000 },
+      { cp: 76560, price: 1000000 }
+    ];
+
+    const mlTopUpOptions = [
+      { diamond: 5, price: 1500 }, { diamond: 11, price: 3000 },
+      { diamond: 14, price: 4000 }, { diamond: 19, price: 5000 },
+      { diamond: 28, price: 6500 }, { diamond: 36, price: 8500 },
+      { diamond: 44, price: 10000 }, { diamond: 59, price: 12000 },
+      { diamond: 74, price: 15000 }, { diamond: 86, price: 17000 },
+      { diamond: 170, price: 30000 }, { diamond: 185, price: 32000 },
+      { diamond: 222, price: 40000 }, { diamond: 296, price: 50000 },
+      { diamond: 370, price: 65000 }, { diamond: 408, price: 70000 },
+      { diamond: 568, price: 95000 }, { diamond: 875, price: 140000 },
+      { diamond: 2010, price: 350000 }, { diamond: 4032, price: 700000 },
+      { diamond: 6038, price: 1000000 }
+    ];
+
+    const hagoTopUpOptions = [
+      { diamond: 6, price: 2000 }, { diamond: 46, price: 14850 },
+      { diamond: 91, price: 29700 }, { diamond: 228, price: 74250 },
+      { diamond: 381, price: 123750 }, { diamond: 915, price: 297000 },
+      { diamond: 1680, price: 544500 }, { diamond: 3362, price: 1089000 }
+    ];
+
+    function showForm(game) {
+      document.getElementById("form").classList.remove("hidden");
+      document.getElementById("game-title").innerText = `Top Up ${game}`;
+      const diamondList = document.getElementById("diamond-list");
+      const nominalSelect = document.getElementById("nominal");
+      const nominalLabel = document.getElementById("nominal-label");
+      diamondList.innerHTML = "";
+      nominalSelect.style.display = "none";
+      nominalLabel.style.display = "none";
+
+      let options = [];
+
+      if (game === "Free Fire") {
+        options = diamondData.map(item => ({ label: `${item.diamond} DM`, value: item.price }));
+      } else if (game === "Call of Duty Mobile") {
+        options = codmTopUpOptions.map(item => ({ label: `${item.cp} CP`, value: item.price }));
+      } else if (game === "Mobile Legends") {
+        options = mlTopUpOptions.map(item => ({ label: `${item.diamond} DM`, value: item.price }));
+      } else if (game === "Hago") {
+        options = hagoTopUpOptions.map(item => ({ label: `${item.diamond} Diamonds`, value: item.price }));
+      }
+
+      if (options.length > 0) {
+        options.forEach(item => {
+          const box = document.createElement("div");
+          box.className = "diamond-item";
+
+          const iconUrl = game === "Call of Duty Mobile"
+            ? "https://assets.onecompiler.app/43mrdkttw/43muctd7x/1000007010.jpg"
+            : "https://assets.onecompiler.app/43mrdkttw/3zhquv7qh/1000006914.png";
+
+          box.innerHTML = `
+            <div><img src="${iconUrl}" /> ${item.label}</div>
+            <div class="harga">Rp ${item.value.toLocaleString()}</div>
+          `;
+          box.onclick = () => {
+            nominalSelect.innerHTML = `<option value="${item.value}">${item.label} - Rp ${item.value.toLocaleString()}</option>`;
+          };
+          diamondList.appendChild(box);
+        });
+      }
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      const id = document.getElementById("game-id").value;
+      const nominal = document.getElementById("nominal").value;
+      const wa = document.getElementById("whatsapp").value;
+      document.getElementById("result").innerHTML = `
+        <strong>Pesanan Diterima</strong><br>
+        ID Game: ${id}<br>
+        Nominal: Rp ${parseInt(nominal).toLocaleString()}<br>
+        Silakan transfer ke Dana: <b>082211040870</b><br>
+        Kami akan hubungi WA: ${wa}
+      `;
+    }
+  </script>
+
+</body>
+</html>
